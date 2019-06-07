@@ -53,7 +53,7 @@
 </style>
 
 	</head>
-	<body style="-webkit-text-size-adjust:none;background-color:#fff;width:650px;font-family:Open-sans, sans-serif;color:#555454;font-size:13px;line-height:18px;margin:auto" >
+	<body style="-webkit-text-size-adjust:none;background-color:#fff;width:650px;font-family:Open-sans, sans-serif;color:#555454;font-size:13px;line-height:18px;margin:auto">
 		<table class="table table-mail" style="width:100%;margin-top:10px;-moz-box-shadow:0 0 5px #afafaf;-webkit-box-shadow:0 0 5px #afafaf;-o-box-shadow:0 0 5px #afafaf;box-shadow:0 0 5px #afafaf;filter:progid:DXImageTransform.Microsoft.Shadow(color=#afafaf,Direction=134,Strength=5)">
 			<tr>
 				<td class="space" style="width:20px;padding:7px 0">&nbsp;</td>
@@ -68,51 +68,43 @@
 						</tr>
 
 <tr>
-    <td align="center" class="titleblock" style="padding:7px 0">
-        <font size="2" face="Open-sans, sans-serif" color="#555454">
-            <span class="title" style="font-weight:500;font-size:28px;text-transform:uppercase;line-height:33px">Hi {firstname} {lastname},</span>
-        </font>
-    </td>
+	<td align="center" class="titleblock" style="padding:7px 0">
+		<font size="2" face="Open-sans, sans-serif" color="#555454">
+			<span class="title" style="font-weight:500;font-size:28px;text-transform:uppercase;line-height:33px">{firstname_friend} {lastname_friend}, join us!</span>
+		</font>
+	</td>
 </tr>
 <tr>
-    <td class="space_footer" style="padding:0!important">&nbsp;</td>
+	<td class="space_footer" style="padding:0!important">&nbsp;</td>
 </tr>
 <tr>
-    <td class="box" style="border:1px solid #D6D4D4;background-color:#f8f8f8;padding:7px 0">
-        <table class="table" style="width:100%">
-            <tr>
-                <td width="10" style="padding:7px 0">&nbsp;</td>
-                <td style="padding:7px 0">
-                    <font size="2" face="Open-sans, sans-serif" color="#555454">
-                        <p data-html-only="1" style="border-bottom:1px solid #D6D4D4;margin:3px 0 7px;text-transform:uppercase;font-weight:500;font-size:18px;padding-bottom:10px">
-                            Order {order_name}&nbsp;-&nbsp;Order edited                        </p>
-                        <span style="color:#777">
-                            Your order with the reference <span style="color:#333"><strong>{order_name}</strong></span> has been modified.                        </span>
-                    </font>
-                </td>
-                <td width="10" style="padding:7px 0">&nbsp;</td>
-            </tr>
-        </table>
-    </td>
+	<td class="box" style="border:1px solid #D6D4D4;background-color:#f8f8f8;padding:7px 0">
+		<table class="table" style="width:100%">
+			<tr>
+				<td width="10" style="padding:7px 0">&nbsp;</td>
+				<td style="padding:7px 0">
+					<font size="2" face="Open-sans, sans-serif" color="#555454">
+						<span style="color:#777">
+							Your friend <span style="color:#333"><strong>{firstname} {lastname}</strong></span> wants to refer you on <a href="{shop_url}" style="color:#337ff1">{shop_name}</a>!<br /><br /> 
+							We are pleased to offer you a voucher worth <span style="color:#333"><strong>{discount}</strong></span> that you can use on your next order.			
+							Get referred and earn a discount voucher of <span style="color:#333"><strong>{discount}!</strong></span>							<a title="Register" href="{link}" style="color:#337ff1">It&#039;s very easy to sign up. Just click here!</a>
+						</span>
+					</font>
+				</td>
+				<td width="10" style="padding:7px 0">&nbsp;</td>
+			</tr>
+		</table>
+	</td>
 </tr>
 <tr>
-    <td class="space_footer" style="padding:0!important">&nbsp;</td>
+	<td class="space_footer" style="padding:0!important">&nbsp;</td>
 </tr>
 <tr>
-    <td class="linkbelow" style="padding:7px 0">
-        <font size="2" face="Open-sans, sans-serif" color="#555454">
-            <span>
-                You can review your order and download your invoice from the <a href="{history_url}" style="color:#337ff1">"Order history"</a> section of your customer account by clicking <a href="{my_account_url}" style="color:#337ff1">"My account"</a> on our shop.            </span>
-        </font>
-    </td>
-</tr>
-<tr>
-    <td class="linkbelow" style="padding:7px 0">
-        <font size="2" face="Open-sans, sans-serif" color="#555454">
-            <span>
-                If you have a guest account, you can follow your order via the <a href="{guest_tracking_url}?id_order={order_name}" style="color:#337ff1">"Guest Tracking"</a> section on our shop.            </span>
-        </font>
-    </td>
+	<td class="linkbelow" style="padding:7px 0">
+		<font size="2" face="Open-sans, sans-serif" color="#555454">
+			<span>When signing up, don&#039;t forget to provide the e-mail address of your referring friend: <span><strong>{email}</strong></span>.<br/><br/>
+			<span>Best regards,		</font>
+	</td>
 </tr>
 
 						<tr>

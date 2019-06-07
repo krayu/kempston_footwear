@@ -14,8 +14,8 @@ $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_99006a61d48499231e1be9224
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_7e3a51a56ddd2846e21c33f05e0aea6f'] = 'All customers';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_39f7a3e2b56e9bfd753ba6325533a127'] = 'Subscribers';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_011d8c5d94f729f013963d856cd78745'] = 'Non-subscribers';
-$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_793ee192a9124cd6f529460eef17d3e5'] = 'Opt-in subscribers';
-$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_7b15c043d66fecc45c8752592aa38e38'] = 'Filter opt-in subscribers.';
+$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_793ee192a9124cd6f529460eef17d3e5'] = 'Opted-in subscribers';
+$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_7b15c043d66fecc45c8752592aa38e38'] = 'Filter opted-in subscribers.';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_417d63b1effb110e438d4b4b9f0fbd95'] = 'The voucher code is invalid.';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_c888438d14855d7d96a2724ee9c306bd'] = 'Settings updated';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_b718adec73e04ce3ec720dd11a06a308'] = 'ID';
@@ -51,7 +51,7 @@ $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_c48244f3d519c8c3260f2a400
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_521f7e76a7d4f9e50c50bb945559b942'] = 'Filter customers by country.';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_1b09c341aa487e26dac94d2467b7f7e3'] = 'Filter customers who have subscribed to the newsletter or not, and who have an account or not.';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_e8be50a6977f278040458abdb2b18229'] = 'Customers can subscribe to your newsletter when registering, or by entering their email in the newsletter block.';
-$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_847b0223c73ac0fec0d9df6539c7cad6'] = 'All Subscribers';
+$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_847b0223c73ac0fec0d9df6539c7cad6'] = 'All subscribers';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_a307579714b75082f3f8734971b125cd'] = 'Subscribers with account';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_d0da5609e4aebc5d532de97511a5a34a'] = 'Subscribers without account';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_6395c19dc5a1cef9ca125b9736358dc7'] = 'Opt-in subscribers';

@@ -1,13 +1,13 @@
 
-[/{shop_url}] 
+[{shop_url}] 
 
 Hi, 
 
 You have received a new return request for {shop_name}. 
 
-Return Details 
+Return details 
 
-ORDER: {order_name} placed on {date}
+ORDER: {order_name} Placed on {date}
 
 CUSTOMER: {firstname} {lastname}, ({email}) 
 
@@ -31,6 +31,6 @@ Customer message:
 
 {message} 
 
-{shop_name} [/{shop_url}] powered by PrestaShop(tm)
-[http://www.prestashop.com/] 
+{shop_name} [{shop_url}] powered by
+PrestaShop(tm) [http://www.prestashop.com/] 
 
