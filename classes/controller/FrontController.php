@@ -949,6 +949,7 @@ class FrontControllerCore extends Controller
 
         $this->addCSS(_THEME_CSS_DIR_.'grid_prestashop.css', 'all');  // retro compat themes 1.5.0.1
         $this->addCSS(_THEME_CSS_DIR_.'global.css', 'all');
+		$this->addCSS(_THEME_CSS_DIR_.'/flaticon/flaticon.css', 'all');
         $this->addJquery();
         $this->addJqueryPlugin('easing');
         $this->addJS(_PS_JS_DIR_.'tools.js');
