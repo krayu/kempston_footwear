@@ -1,0 +1,29 @@
+<?php /* Smarty version Smarty-3.1.19, created on 2019-06-07 12:50:20
+         compiled from "C:\wamp64_7\www\presta\admin\themes\default\template\controllers\marketing\helpers\view\view.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:58285cfa5d8c54cc94-92151374%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'a4e692c097c155dbedaa35c477514893f3d765b6' => 
+    array (
+      0 => 'C:\\wamp64_7\\www\\presta\\admin\\themes\\default\\template\\controllers\\marketing\\helpers\\view\\view.tpl',
+      1 => 1473170712,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '58285cfa5d8c54cc94-92151374',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'modules_list' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.19',
+  'unifunc' => 'content_5cfa5d8c56c0a1_80307847',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5cfa5d8c56c0a1_80307847')) {function content_5cfa5d8c56c0a1_80307847($_smarty_tpl) {?>
+
+<?php echo $_smarty_tpl->tpl_vars['modules_list']->value;?>
+<?php }} ?>
