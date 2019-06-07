@@ -35,6 +35,5 @@ function upgrade_module_1_4_9($object)
 			  `id_tab` int(11) NOT NULL,
 			  `id_advice` int(11) NOT NULL,
 			  PRIMARY KEY (`id_tab`, `id_advice`)
-			) ENGINE='._MYSQL_ENGINE_.' DEFAULT CHARSET=utf8;'
-    );
+			) ENGINE='._MYSQL_ENGINE_.' DEFAULT CHARSET=utf8;');
 }

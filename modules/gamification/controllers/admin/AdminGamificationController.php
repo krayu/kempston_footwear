@@ -8,14 +8,14 @@ class AdminGamificationController extends ModuleAdminController
     {
         $this->bootstrap = true;
         $this->display = 'view';
-        parent::__construct();
         $this->meta_title = $this->l('Your Merchant Expertise');
+        parent::__construct();
         if (!$this->module->active) {
             Tools::redirectAdmin($this->context->link->getAdminLink('AdminHome'));
         }
     }
     
-    public function setMedia($isNewTheme = false)
+    public function setMedia()
     {
         $this->addJqueryUI('ui.progressbar');
         $this->addJS(_MODULE_DIR_.$this->module->name.'/views/js/bubble-popup.js');
@@ -29,7 +29,7 @@ class AdminGamificationController extends ModuleAdminController
         $this->addJs(_MODULE_DIR_.$this->module->name.'/views/js/jquery.isotope.js');
         $this->addCSS(array(_MODULE_DIR_.$this->module->name.'/views/css/bubble-popup.css', _MODULE_DIR_.$this->module->name.'/views/css/isotope.css'));
         
-        return parent::setMedia($isNewTheme);
+        return parent::setMedia();
     }
     
     public function initToolBarTitle()
@@ -154,7 +154,7 @@ class AdminGamificationController extends ModuleAdminController
                 $return['advices_premium_to_display']['advices'] = array($weighted_advices_array[$rand], $weighted_advices_array[$rand2]);
             } elseif (count($return['advices_premium_to_display']['advices']) > 0) {
                 $addons = Advice::getAddonsAdviceByIdTab((int)Tools::getValue('id_tab'));
-                $return['advices_premium_to_display']['advices'][] = array_shift($addons);
+                $return['advices_premium_to_display']['advices'][] = $addons[0];
             }
         }
         

@@ -29,31 +29,30 @@
 </script>
 <li id="gamification_notif" style="background:none" class="dropdown">
 	<a href="javascript:void(0);" class="dropdown-toggle gamification_notif" data-toggle="dropdown">
-		<img src="{$link->getBaseLink()}modules/gamification/views/img/trophy.png" alt="{$notification|intval}"/>
+		<i class="icon-trophy"></i>
 		<span id="gamification_notif_number_wrapper" class="notifs_badge">
 			<span id="gamification_notif_value">{$notification|intval}</span>
 		</span>
 	</a>
 	<div class="dropdown-menu notifs_dropdown" id="dropdown_gamification">
-		<section id="gamification_notif_wrapper" class="notifs_panel">
+		<section id="gamification_notif_wrapper" class="notifs_panel" style="width:325px">
 			<header class="notifs_panel_header">
-				<p>
-					<span class="notifs-title">{l s='Your Merchant Expertise' mod='gamification'}</span>
-					<span class="notifs-level">{l s='Level' mod='gamification'} {$current_level|intval} : {$current_level_percent|intval} %</span>
-				</p>
+				<h3>{l s='Your Merchant Expertise' mod='gamification'}
+					<span class="label label-default" style="float:right">{l s='Level' mod='gamification'} {$current_level|intval} : {$current_level_percent|intval} %</span>
+				</h3>
 			</header>
-			<div class="progress">
+			<div class="progress" style="margin: 10px">
 				<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{$current_level_percent|intval}" aria-valuemin="0" aria-valuemax="100" style="width: {$current_level_percent|intval}%;">
-					<span></span>
+				<span style="color:#FFF">{l s='Level' mod='gamification'} {$current_level|intval} : {$current_level_percent|intval} %</span>
 				</div>
 			</div>
 			<!-- Nav tabs -->
-			<ul class="nav nav-tabs" id="gamification_tab">
-				<li class="nav-item active">
-					<a class="nav-link" href="#home" data-toggle="tab" data-target="gamification_1" onclick="gamificationDisplayTab(this); return false;">{l s='Last badge :' mod='gamification'}</a>
+			<ul class="nav nav-tabs" id="gamification_tab" style="margin-left:10px">
+				<li class="active">
+					<a href="#home" data-toggle="tab" data-target="gamification_1" onclick="gamificationDisplayTab(this); return false;">{l s='Last badge :' mod='gamification'}</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#profile" data-toggle="tab" data-target="gamification_2" onclick="gamificationDisplayTab(this); return false;">{l s='Next badge :' mod='gamification'}</a>
+				<li>
+					<a href="#profile" data-toggle="tab" data-target="gamification_2" onclick="gamificationDisplayTab(this); return false;">{l s='Next badge :' mod='gamification'}</a>
 				</li>
 			</ul>
 
@@ -90,7 +89,7 @@
 			</div>
 
 			<footer class="panel-footer">
-				<a href="{$link->getAdminLink('AdminGamification')}">{l s='View my complete profile' mod='gamification'} <i class="material-icons">chevron_right</i></a>
+				<a href="{$link->getAdminLink('AdminGamification')}">{l s='View my complete profile' mod='gamification'}</a>
 			</footer>
 		</section>
 	</div>
