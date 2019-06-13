@@ -34,12 +34,60 @@
 				<!-- Footer -->
 				<div class="footer-container">
 					<footer id="footer"  class="container">
-						<div class="row">{$HOOK_FOOTER}</div>
+						<div class="row">			
+							<div id="footer_left">    
+								<div id="htmlcontent_footer">
+									<div class="">
+										<ul class="htmlcontent-home clearfix ">
+											<li class="htmlcontent-item-1">
+												<div class="bannerBox">
+													<a href="/"><img src="/img/kempston_footwear_logo.png" class="item-img" title="Logo" alt="Logo" width="100%" height="100%"></a>
+													<div class="item-html">
+														<div style="font-size: 15px; text-align: center;">
+														Bedford Town Centre<br/>
+														15 Howard Centre<br/>
+														Horne Lane<br/>
+														Bedford, MK40 1UH<br/>
+														+44 (0)1234 267076<br/>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<section id="social_block">
+									<ul>
+										<li class="facebook"> <a target="_blank" href="https://www.facebook.com/Kempston-Footwear-377266232349041" title="Facebook"> <span>Facebook</span> </a>
+										</li>
+										<li class="twitter"> <a target="_blank" href="https://www.facebook.com/Kempston-Footwear-377266232349041" title="Twitter"> <span>Twitter</span> </a>
+										</li>
+										<li class="rss"> <a target="_blank" href="https://www.facebook.com/Kempston-Footwear-377266232349041" title="RSS"> <span>RSS</span> </a>
+										</li>
+										<li class="google-plus"> <a target="_blank" href="https://www.facebook.com/Kempston-Footwear-377266232349041" title="Google Plus"> <span>Google Plus</span> </a>
+										</li>
+									</ul> 
+								</section>
+							</div>
+							<div id="footer_right">
+								<div class="footer_right_iner">
+								{$HOOK_FOOTER}
+								</div>
+							</div>
+						</div>
 					</footer>
 				</div><!-- #footer -->
 			{/if}
 		</div><!-- #page -->
 {/if}
 {include file="$tpl_dir./global.tpl"}
+		<script src="/js/stickUp.min.js"></script>
+		<script type="text/javascript">
+			jQuery(function($) {
+				$(document).ready( function() {
+				  $('.stickUpTop').stickUp();
+				});
+			});
+		</script>
 	</body>
 </html>
