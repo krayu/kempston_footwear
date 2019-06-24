@@ -42,6 +42,7 @@
 		<meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<link rel="icon" type="image/vnd.microsoft.icon" href="{$favicon_url}?{$img_update_time}" />
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:light,bold&subset=Latin">
 		<link rel="shortcut icon" type="image/x-icon" href="{$favicon_url}?{$img_update_time}" />
 		{if isset($css_files)}
 			{foreach from=$css_files key=css_uri item=media}
@@ -62,8 +63,10 @@
 			<script type="text/javascript" src="{$js_uri|escape:'html':'UTF-8'}"></script>
 			{/foreach}
 		{/if}
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+
 		{$HOOK_HEADER}
-		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,600&amp;subset=latin,latin-ext" type="text/css" media="all" />
+		
 		<!--[if IE 8]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -77,6 +80,7 @@
 			</div>
 		{/if}
 		<div id="page">
+			<div id="toTop" class="flaticon-backward-arrow" style="display: none; visibility: visible;"></div>
 			<div class="header-container">
 				<header id="header">
 					{capture name='displayBanner'}{hook h='displayBanner'}{/capture}
@@ -89,41 +93,47 @@
 							</div>
 						</div>
 					{/if}
-					{capture name='displayNav'}{hook h='displayNav'}{/capture}
-					{if $smarty.capture.displayNav}
-						<div class="nav">
-							<div class="container">
-								<div class="row">
-									<nav>{$smarty.capture.displayNav}</nav>
-								</div>
-							</div>
-						</div>
-					{/if}
-					<div>
+					<div class="nav">
 						<div class="container">
 							<div class="row">
-								<div id="header_logo">
-									<a href="{if isset($force_ssl) && $force_ssl}{$base_dir_ssl}{else}{$base_dir}{/if}" title="{$shop_name|escape:'html':'UTF-8'}">
-										<img class="logo img-responsive" src="{$logo_url}" alt="{$shop_name|escape:'html':'UTF-8'}"{if isset($logo_image_width) && $logo_image_width} width="{$logo_image_width}"{/if}{if isset($logo_image_height) && $logo_image_height} height="{$logo_image_height}"{/if}/>
-									</a>
-								</div>
-								{if isset($HOOK_TOP)}{$HOOK_TOP}{/if}
+								<nav>
+									<div id="header_logo">
+										<a href="{if isset($force_ssl) && $force_ssl}{$base_dir_ssl}{else}{$base_dir}{/if}" title="{$shop_name|escape:'html':'UTF-8'}">
+											<img class="logo img-responsive" src="{$logo_url}" alt="{$shop_name|escape:'html':'UTF-8'}"{if isset($logo_image_width) && $logo_image_width} width="{$logo_image_width}"{/if}{if isset($logo_image_height) && $logo_image_height} height="{$logo_image_height}"{/if}/>
+										</a>
+									</div>
+									{capture name='displayNav'}{hook h='displayNav'}{/capture}
+									{if $smarty.capture.displayNav}
+										<div style="float: right">
+											{$smarty.capture.displayNav}
+										</div>
+									{/if}		
+								</nav>	
 							</div>
 						</div>
+					</div>
+					<div class="bottom_header">	
+						<div class="stickUpTop" style="position: relative; top: 0px;">
+							<div class="stickUpHolder container">
+								<div class="container">
+									<div class="row">
+										{if isset($HOOK_TOP)}{$HOOK_TOP}{/if}
+									</div>
+								</div>
+							</div>
+						</div>								
 					</div>
 				</header>
 			</div>
 			<div class="columns-container">
+				{capture name='displayTopColumn'}{hook h='displayTopColumn'}{/capture}
+				{if $smarty.capture.displayTopColumn}
+					<div id="top_column">{$smarty.capture.displayTopColumn}</div>
+				{/if}
 				<div id="columns" class="container">
 					{if $page_name !='index' && $page_name !='pagenotfound'}
 						{include file="$tpl_dir./breadcrumb.tpl"}
 					{/if}
-					<div id="slider_row" class="row">
-						{capture name='displayTopColumn'}{hook h='displayTopColumn'}{/capture}
-						{if $smarty.capture.displayTopColumn}
-							<div id="top_column" class="center_column col-xs-12 col-sm-12">{$smarty.capture.displayTopColumn}</div>
-						{/if}
-					</div>
 					<div class="row">
 						{if isset($left_column_size) && !empty($left_column_size)}
 						<div id="left_column" class="column col-xs-12 col-sm-{$left_column_size|intval}">{$HOOK_LEFT_COLUMN}</div>
