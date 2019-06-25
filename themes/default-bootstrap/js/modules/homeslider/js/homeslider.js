@@ -24,39 +24,74 @@
 *  International Registered Trademark & Property of PrestaShop SA
 */
 
+
+
 $(document).ready(function(){
+	$("#toTop").css('visibility','visible');
+	$("#toTop").hide();
+	$(function()
+	{
+		$(window).scroll(function()
+		{
+			if($(this).scrollTop()>300)
+			{
+				$('#toTop').fadeIn();
+			}else
+			{
+				$('#toTop').fadeOut();
+			}
+		});
+		$('#toTop').click(function()
+		{
+			$('body,html').animate({scrollTop:0},800);
+			return false;
+		});
+	});
+	$('#searchbox input').focus(function()
+	{
+		$('#searchbox').addClass('focusDiv');
+	});
+	$('#searchbox input').blur(function(){
+		$('#searchbox').removeClass('focusDiv');
+	});
+	
+
 
 	if (typeof(homeslider_speed) == 'undefined')
 		homeslider_speed = 500;
 	if (typeof(homeslider_pause) == 'undefined')
-		homeslider_pause = 3000;
+		homeslider_pause = 5000;
 	if (typeof(homeslider_loop) == 'undefined')
 		homeslider_loop = true;
 	if (typeof(homeslider_width) == 'undefined')
-		homeslider_width = 779;
+		homeslider_width = 10000;
 
+	var tl=new TimelineMax();
 
 	$('.homeslider-description').click(function () {
 		window.location.href = $(this).prev('a').prop('href');
 	});
 
-	if ($('#htmlcontent_top').length > 0)
-		$('#homepage-slider').addClass('col-xs-8');
-	else
-		$('#homepage-slider').addClass('col-xs-12');
 
 	if (!!$.prototype.bxSlider)
 		$('#homeslider').bxSlider({
-			useCSS: false,
-			maxSlides: 1,
-			slideWidth: homeslider_width,
-			infiniteLoop: homeslider_loop,
-			hideControlOnEnd: true,
-			pager: false,
-			autoHover: true,
-			auto: homeslider_loop,
-			speed: parseInt(homeslider_speed),
-			pause: homeslider_pause,
-			controls: true
+			mode:'fade',
+			useCSS:false,
+			maxSlides:1,
+			slideWidth:homeslider_width,
+			infiniteLoop:homeslider_loop,
+			hideControlOnEnd:true,
+			pager:false,autoHover:true,
+			autoControls:false,
+			auto:homeslider_loop,
+			speed:parseInt(homeslider_speed),
+			pause:homeslider_pause,
+			controls:true,
+			startText:'',
+			stopText:'',
+			onSliderLoad:function(){tl.play()},
+			onSlideBefore:function(){tl.restart()},
+			onSlideAfter:function(){}
 		});
+		
 });
